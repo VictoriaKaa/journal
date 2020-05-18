@@ -1,0 +1,181 @@
+.booksTitle{
+    padding: 10px;
+    text-align: center;
+    font-size: 56px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--light-text-color);
+    font-family: 'Neucha', cursive;
+}
+.booksList{
+    position: relative;
+    min-height: 95vh;
+    background-color: rgb(var(--main-block-color), 0.9);
+    box-shadow: 0px 5px 20px 3px rgba(84,70,8,1);
+    width: 50%;
+    min-height: 700px;
+    margin: 20px auto;
+    font-family: 'Neucha', cursive;
+}
+.itemBlock{
+    display: flex;
+    padding: 20px;
+    margin: 10px 20px;
+    border: 4px inset var(--btn-color);
+}
+.book{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.title, .id, .read{
+    font-size: 20px;
+	color: var(--light-text-color);
+    font-family: 'Neucha', cursive;
+}
+.author{
+	font-size: 16px;
+	color: var(--text-color);
+}
+.bookFormInner{
+    display: flex;
+}
+.formControl{
+    margin-left: 20px;
+    padding: 5px;
+    width: 190px;
+    height: 20px;
+    border: 1px solid var(--tracker-color);
+    border-radius: 5px;
+    background-color: var(--light-text-color);
+    color: #555555;
+    font-family: 'Pangolin', cursive;
+    font-size: 14px;
+}
+.addBtn{
+    width: 150px;
+    height: 30px;
+    margin-left: 10px;
+    border: 1px solid var(--navbar-color);
+    border-radius: 5px;
+    background-color: var(--light-text-color);
+    color: var(--btn-color);
+    font-size: 14px;
+    font-family: 'Pangolin', cursive;
+}
+.addBtn:hover{
+    background-color: var(--btn-color);
+    border-color: var(--btn-color);
+    color: var(--light-text-color);
+    cursor: pointer;
+}
+.checkBtn{
+    position: absolute;
+    bottom: 10px;
+    left: calc(50% - 96px);
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: var(--btn-color);
+    color: var(--light-text-color);
+    border: 1px solid var(--btn-color);
+    text-align: center;
+}
+.checkBtn:hover{
+    background-color: var(--light-text-color);
+    color: var(--btn-color);
+    border: 1px solid var(--light-text-color);
+}
+.isRead{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border: 1px solid black;
+    background-color: var(--text-color);
+}
+input[type="checkbox"]:checked + label:after, 
+input[type="checkbox"]:not(:checked) + label:after{
+    content: "";
+    position: absolute;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+input[type="checkbox"]:checked, 
+input[type="checkbox"]:not(:checked)
+{
+    position: absolute;
+    left: -9999px;
+}
+
+input[type="checkbox"]:checked + label, 
+input[type="checkbox"]:not(:checked) + label{
+    display: inline-block;
+    position: relative;
+    padding-left: 28px;
+    line-height: 20px;
+    cursor: pointer;
+}
+input[type="checkbox"]:checked + label:before, 
+input[type="checkbox"]:not(:checked) + label:before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--light-pink-color);
+    background-color: #ffffff;
+}
+
+input[type="checkbox"]:checked + label:before, 
+input[type="checkbox"]:not(:checked) + label:before {
+    border-radius: 3px;
+}
+input[type="checkbox"]:checked + label:after, 
+input[type="checkbox"]:not(:checked) + label:after {
+    left: 4px;
+    top: 4px;
+    width: 11px;
+    height: 6px;
+    border-radius: 2px;
+    border-left: 3px solid var(--dark-border-color);
+    border-bottom: 3px solid var(--dark-border-color);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+input[type="checkbox"]:not(:checked) + label:after, 
+input[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+}
+
+input[type="checkbox"]:checked + label:after, 
+input[type="radio"]:checked + label:after {
+    opacity: 1;
+}
+
+.changeBlock{
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 20px;
+}
+.delete{
+    position: relative;
+    cursor: pointer;
+}
+.delete::before{
+    position: absolute;
+    font-family: 'icomoon';
+    content: "\f014";
+    top: -1px;
+    left: -20px;
+    font-size: 23px;
+    color: var(--navbar-color);
+}
+
+
+    

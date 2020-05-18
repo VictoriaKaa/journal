@@ -1,0 +1,29 @@
+nav{
+    background-color: rgb(var(--navbar-block-color), 0.7);
+    width: 250px;
+    min-height: 100%;
+}
+.item{
+    margin: 10px;
+}
+.item a{
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--navbar-dark-color);
+    padding: 5px;
+    font-size: 20px;
+    text-decoration: none;
+    font-family: 'Neucha', cursive;
+}
+
+.item a.active{
+    color: var(--navbar-dark-color);
+    font-weight: bold;
+    background-color: var(--light-pink-color);
+}
+
+@media(max-width: 600px){
+    .item{
+        padding: 20px;
+    }
+}

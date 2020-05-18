@@ -1,0 +1,89 @@
+.monthListBlock{
+    composes: habitBlock from "./Tracker/Tracker.module.css"
+}
+.monthListTitle{
+    composes: habitTitle from "./Tracker/Tracker.module.css";
+    font-size: 64px;
+}
+.monthForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+.addBtn{
+    width: 278px;
+    height: 45px;
+    margin-left: 25px;
+    border: 1px solid var(--month-btn-color);
+    border-radius: 10px;
+    background-color: var(--month-btn-color);
+    color: var(--navbar-color);
+    font-weight: 600;
+    font-size: 16px;
+    font-family: 'Pangolin', cursive;
+    cursor: pointer;
+  }
+.addBtn:hover{
+    border: 1px solid var(--navbar-color);
+    background-color: var(--navbar-color);
+    color: var(--month-btn-color);
+}
+.formControl{
+    composes: formControl from "../common/ItemList/ItemList.module.css";
+    width: 58px;
+    height: 25px;
+    font-size: 14px;
+    text-align: center;
+    padding: 3px;
+}
+.formText{
+   font-size: 16px;
+   font-weight: bold;
+   text-align: center;
+   margin-left: 15px;
+   font-family: 'Neucha', cursive;
+}
+.months{
+    composes: habitTitle from "./Tracker/Tracker.module.css";
+    font-size: 50px;
+    color: var(--dark-border-color);
+    margin-top: 20px;
+}
+.monthItem{
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    /* justify-content: space-around; */
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: var(--navbar-color);
+    color: var(--month-btn-color);
+    font-size: 24px;
+    font-family: 'Neucha', cursive;
+}
+.monthLink{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.link{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--month-btn-color);
+}
+.link:hover{
+    color: var(--red-hover-color);
+}
+.delete{
+    composes: delete from "../common/ItemList/ItemList.module.css";
+}
+.delete::before{
+    top: 4px;
+    left: -30px;
+    cursor: pointer;
+    color: var(--month-btn-color);
+}

@@ -1,0 +1,81 @@
+@import '../../App.module.css';
+.block{
+    margin: 10px 40px;
+    padding: 30px;
+    background-color: rgb(var(--main-block-color), 0.9);
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Neucha', cursive;
+    color: var(--text-color);
+}
+.title{
+    text-align: center;
+    font-size: 56px;
+    text-transform: uppercase;
+    color: var(--light-text-color);
+}
+.system{
+    padding-top: 30px;
+    font-size: 25px;
+}
+.navTitle{
+    font-size: 20px;
+    padding: 20px 20px 0px 0px;
+}
+.list a{
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--text-color);
+}
+.keys{
+    padding: 20px 0px;
+}
+.monthBlock{
+    padding-left: 40px;
+}
+.add,
+.have,
+.done,
+.moved,
+.cancel{
+    position: relative;
+    padding: 5px;
+}
+.add{
+    composes: add from "../MonthList/Week/Week.module.css"
+}
+.have::before{
+    position: absolute;
+    content: "";
+    width: 13px;
+    height: 13px;
+    border: 5px inset var(--border-color);
+}
+.done{
+    composes: done from "../MonthList/Week/Week.module.css";
+    border: none;
+}
+.moved{
+    composes: moved from "../MonthList/Week/Week.module.css";
+}
+.add::before,
+.have::before,
+.done::before,
+.moved::before,
+.cancel::before{
+    top: 5px;
+    left: -30px;
+    color: var(--border-color);
+}
+.moved::before,
+.add::before,
+.cancel::before{
+    font-size: 25px;
+}
+.cancel{
+    composes: cancel from "../MonthList/Week/Week.module.css"
+}
+
+.themeBtn{
+    composes: addBtn from "../common/ItemList/ItemList.module.css"
+}

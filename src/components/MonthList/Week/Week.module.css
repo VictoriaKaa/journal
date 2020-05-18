@@ -1,0 +1,131 @@
+.weekBlock{
+    composes: booksList from "../../common/ItemList/ItemList.module.css";
+    width: 80%;
+    padding: 10px;
+}
+.title{
+    composes: booksTitle from "../../common/ItemList/ItemList.module.css";
+    padding: 5px 5px 20px;
+    font-size: 44px;
+}
+.block{
+    display: flex;
+}
+
+.week{
+    display: flex;
+}
+.day{
+    padding: 10px;
+    border: 1px solid black;
+}
+.todo{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 30px;
+}
+.workDay{
+    cursor: pointer;
+    position: relative;
+}
+.list{
+    width: 500px
+}
+
+table{
+    width:100%; 
+    background-color: rgb(var(--light-pink-rgb-color), 0.9);
+}
+table th{
+    border: 1px solid black;
+}
+.add::before,
+.have::before,
+.done::before,
+.moved::before,
+.cancel::before{
+    position: absolute;
+    font-family: 'icomoon';
+    content: "";
+    top: 14px;
+    left: 22px;
+    font-size: 15px;
+    color: #4a2530;
+    cursor: pointer;
+}
+.add::before{
+    content: "\f067";
+}
+.done{
+    border: 5px outset var(--border-color);
+}
+.have{
+    content: "\f00d";
+    border: 5px outset var(--border-color);
+}
+.done::before{
+    content: "\f00c";
+    top: 5px;
+    left: 14px;
+    font-size: 22px;
+}
+.moved::before{
+    top: 10px;
+    left: 19px;
+    font-size: 22px;
+    content: "\f178";
+}
+.cancel::before{ 
+    top: 6px;
+    left: 20px;
+    font-size: 27px;
+    content: "\f00d";
+}
+.formInner{
+    display: flex;
+    margin: 10px;
+}
+.formControl{
+    composes: formControl from "../../common/ItemList/ItemList.module.css";
+    padding: 4px;
+    width: 250px;
+}
+.addBtn{
+    composes: addBtn from "../../common/ItemList/ItemList.module.css";
+    border: 1px solid var(--dark-border-color);
+    border-radius: 5px;
+    background-color: var(--dark-border-color);
+    color: var(--week-bc-color);
+    font-weight: bold;
+}
+.addBtn:hover{
+    border-color: var(--week-bc-color);
+    background-color: var(--week-bc-color);
+    color: var(--dark-border-color);
+}
+.backBlock{
+    composes: backBlock from "../Month/Month.module.css";
+}
+.back{
+    composes: back from "../Month/Month.module.css";
+}
+.deleteBtn{
+    composes: delete from "../../common/ItemList/ItemList.module.css";
+}
+.deleteBtn::before{
+    top: 0;
+    left: -25px;
+    cursor: pointer;
+}
+.colorInput{
+    width: 25px;
+    margin: -3px;
+    cursor: pointer;
+}
+.extend{
+    composes: extend from "../Tracker/Tracker.module.css";
+}
+.extend::before {
+    top: 0px;
+    left: -60px;
+}

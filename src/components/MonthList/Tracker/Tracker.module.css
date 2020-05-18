@@ -1,0 +1,126 @@
+.habitTitle{
+  text-align: center;
+  padding: 10px;
+  font-size: 50px;
+  font-weight: bold;
+  color: var(--light-text-color);
+  font-family: 'Neucha', cursive;
+}
+.habitBlock{
+  min-height: 95vh;
+  padding: 10px;
+  width: 90%;
+  background-color: rgb(var(--main-block-color), 0.9);
+  box-shadow: 0px 5px 20px 3px rgba(84,70,8,1);
+  margin: 20px auto;
+  font-family: 'Neucha', cursive;
+}
+.habit{
+    padding: 20px;
+}
+.id,
+.title{
+  font-size: 20px;
+  color: var(--light-text-color);
+  font-family: 'Neucha', cursive;
+}
+.dayList{
+  margin-top: 10px;
+}
+.done {
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    margin-left: 2px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: var(--btn-color);
+    text-shadow: none;
+    font-size: 20px; 
+}
+.done input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 24px;
+  width: 25px;
+  background-color: var(--light-text-color);
+  text-align: center;
+  border: 1px solid var(--tracker-color);
+}
+.greyCheckmark{
+  composes: checkmark;
+  background-color: var(--light-pink-color);
+}
+.done:hover input ~ .checkmark {
+  background-color: var(--week-color);
+  color: var(--light-text-color);
+}
+
+/* When the checkbox is checked, add a blue background */
+.done input:checked ~ .checkmark {
+  background-color: var(--btn-color);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.done input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.done .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.trackerFormInner{
+  display: flex;
+}
+.formControl{
+  composes: formControl from "../../common/ItemList/ItemList.module.css";
+  width: 300px;
+}
+.addBtn{
+  composes: addBtn from "../../common/ItemList/ItemList.module.css";
+}
+.delete,
+.extend{
+  composes: delete from "../../common/ItemList/ItemList.module.css";
+}
+.delete::before{
+  left: 60px;
+}
+.extend::before{
+  content: "\f178";
+  top: -3px;
+  left: 25px;
+}
+.backBlock{
+  composes: backBlock from "../Month/Month.module.css";
+}
+.back{
+  composes: back from "../Month/Month.module.css";
+}

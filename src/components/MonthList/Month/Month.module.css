@@ -1,0 +1,56 @@
+.block{
+    composes: booksList from "../../common/ItemList/ItemList.module.css";
+    width: 70%;
+}
+.title{
+    composes: booksTitle from "../../common/ItemList/ItemList.module.css";
+    padding: 30px 0px 50px;
+}
+.month{
+    display: flex;
+    justify-content: center;
+}
+
+.week{
+    display: flex; 
+}
+.day{
+    width: 30px;
+    background-color: rgb(var(--navbar-block-color), 0.9);
+    text-align: center;
+    padding: 10px 10px;
+    border: 1px solid black;
+}
+.link{
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--week-color);
+    cursor: pointer;
+}
+.link:hover{
+    color: var(--red-hover-color);
+}
+.linkTracker{
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--week-bc-color);
+}
+.backBlock{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.back{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--week-btn-color);
+    background-color: var(--week-btn-color);
+    font-weight: bold;
+    color: var(--week-bc-color);
+}
+.back:hover{
+    cursor: pointer;
+    border-color: var(--week-bc-color);
+    background-color: var(--week-bc-color);
+    color: var(--week-btn-color);
+}

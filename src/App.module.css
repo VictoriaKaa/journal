@@ -1,0 +1,46 @@
+:root{
+  --main-color: #c86b85;
+  --main-block-color: 200, 107, 133;
+  --light-pink-color: #e6a4b4;
+  --light-pink-rgb-color: 230, 164, 180;
+  --navbar-color: #f3d7ca;
+  --navbar-block-color: 243, 215, 202;
+  --navbar-dark-color: #361e0b;
+  --light-text-color: #f5eee6;
+  --text-color: #ffdad1;
+  --border-color: #91495e;
+  --dark-border-color: #6e0a33;
+  --btn-color: #633240;
+  --month-btn-color: #7d3e50;
+  --red-hover-color: #de0430;
+  --week-color: #962f06;
+  --week-btn-color: #592e3f;
+  --week-bc-color: #e8dfc8;
+  --tracker-color: #bf5c78;
+  --bc-image: url(../src/img/3725771.jpg);
+}
+
+.appWrapper{
+  margin: 0px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.appWrapper:after {
+  content : "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: var(--bc-image); 
+  background-position: center;
+  width: 100%;
+  min-height: 100%;
+  /* opacity : 0.9; */
+  z-index: -1;
+}
+
+.appWrapperContent{
+  width: 100%;
+}
