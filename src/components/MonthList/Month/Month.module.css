@@ -4,7 +4,7 @@
 }
 .title{
     composes: booksTitle from "../../common/ItemList/ItemList.module.css";
-    padding: 30px 0px 50px;
+    padding: 30px 10px 50px;
 }
 .month{
     display: flex;
@@ -53,4 +53,31 @@
     border-color: var(--week-bc-color);
     background-color: var(--week-bc-color);
     color: var(--week-btn-color);
+}
+
+@media(max-width: 680px){
+    .block{
+        width: 90%;
+    }
+}
+@media(max-width: 530px){
+    .title{
+        font-size: 50px;
+    }
+}
+@media(max-width: 475px){
+    .title{
+        font-size: 40px;
+    }
+    .day{
+        width: 20px;
+    }
+}
+@media(max-width: 395px){
+    .title{
+        font-size: 40px;
+    }
+    .day{
+        width: 12px;
+    }
 }

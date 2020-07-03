@@ -40,7 +40,7 @@ const StartPage = (props) => {
       </div>
       <ul className={styles.list}>
         <li>
-          <Link exact to="/plans">
+          <Link to="/plans">
             Планы и цели
           </Link>
         </li>

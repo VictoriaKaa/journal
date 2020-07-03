@@ -7,7 +7,7 @@
   font-family: 'Neucha', cursive;
 }
 .habitBlock{
-  min-height: 95vh;
+  min-height: 85vh;
   padding: 10px;
   width: 90%;
   background-color: rgb(var(--main-block-color), 0.9);
@@ -25,7 +25,10 @@
   font-family: 'Neucha', cursive;
 }
 .dayList{
+  min-height: 60px;
   margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
 }
 .done {
     position: relative;
@@ -123,4 +126,46 @@
 }
 .back{
   composes: back from "../Month/Month.module.css";
+}
+
+@media(max-width: 600px){
+  .habitBlock{
+    min-height: 70vh;
+  }
+  .dayList{
+    min-height: 100px;
+  }
+}
+
+@media(max-width: 470px){
+  .trackerFormInner{
+    flex-wrap: wrap;
+  }
+  .dayList{
+    min-height: 115px;
+  }
+  .habit{
+    padding: 10px;
+  }
+  .habitTitle{
+    font-size: 40px;
+  }
+  .formControl{
+    width: 220px;
+  }
+  .addBtn{
+    font-size: 12px;  
+  }
+  .id,
+  .title{
+    font-size: 16px;
+  }
+  .checkmark {
+    font-size: 16px;
+    height: 19px;
+    padding-top: 4px;
+  }
+  .back{
+    font-size: 14px;
+  }
 }

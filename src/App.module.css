@@ -35,12 +35,18 @@
   left: 0;
   background-image: var(--bc-image); 
   background-position: center;
-  width: 100%;
-  min-height: 100%;
-  /* opacity : 0.9; */
+  width: 100vw;
+  min-height: 100vh;
   z-index: -1;
 }
 
 .appWrapperContent{
   width: 100%;
+}
+
+@media(max-width: 1300px){
+  .appWrapper{
+      min-height: auto;
+      display: block;
+  }
 }

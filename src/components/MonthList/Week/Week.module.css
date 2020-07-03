@@ -1,131 +1,290 @@
-.weekBlock{
-    composes: booksList from "../../common/ItemList/ItemList.module.css";
-    width: 80%;
-    padding: 10px;
+.weekBlock {
+  composes: booksList from "../../common/ItemList/ItemList.module.css";
+  width: 80%;
+  padding: 10px;
 }
-.title{
-    composes: booksTitle from "../../common/ItemList/ItemList.module.css";
-    padding: 5px 5px 20px;
-    font-size: 44px;
+.title {
+  composes: booksTitle from "../../common/ItemList/ItemList.module.css";
+  padding: 5px 5px 20px;
+  font-size: 44px;
 }
-.block{
-    display: flex;
-}
-
-.week{
-    display: flex;
-}
-.day{
-    padding: 10px;
-    border: 1px solid black;
-}
-.todo{
-    display: flex;
-    justify-content: space-between;
-    padding-left: 30px;
-}
-.workDay{
-    cursor: pointer;
-    position: relative;
-}
-.list{
-    width: 500px
+.block {
+  display: flex;
 }
 
-table{
-    width:100%; 
-    background-color: rgb(var(--light-pink-rgb-color), 0.9);
+.week {
+  display: flex;
 }
-table th{
-    border: 1px solid black;
+.day {
+  padding: 10px;
+  border: 1px solid black;
+}
+.todo {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 45px;
+  text-align: left;
+}
+.workDay {
+  cursor: pointer;
+  position: relative;
+}
+.list {
+  width: 500px;
+}
+
+table {
+  width: 100%;
+  background-color: rgb(var(--light-pink-rgb-color), 0.9);
+}
+table th {
+  border: 1px solid black;
 }
 .add::before,
 .have::before,
 .done::before,
 .moved::before,
-.cancel::before{
-    position: absolute;
-    font-family: 'icomoon';
-    content: "";
-    top: 14px;
-    left: 22px;
-    font-size: 15px;
-    color: #4a2530;
-    cursor: pointer;
+.cancel::before {
+  position: absolute;
+  font-family: "icomoon";
+  content: "";
+  top: 14px;
+  left: 15px;
+  font-size: 15px;
+  color: #4a2530;
+  cursor: pointer;
 }
-.add::before{
-    content: "\f067";
+.add::before {
+  content: "\f067";
 }
-.done{
-    border: 5px outset var(--border-color);
+.done {
+  border: 5px outset var(--border-color);
 }
-.have{
-    content: "\f00d";
-    border: 5px outset var(--border-color);
+.have {
+  content: "\f00d";
+  border: 5px outset var(--border-color);
 }
-.done::before{
-    content: "\f00c";
-    top: 5px;
-    left: 14px;
-    font-size: 22px;
+.done::before {
+  content: "\f00c";
+  top: 5px;
+  left: 6px;
+  font-size: 22px;
 }
-.moved::before{
-    top: 10px;
-    left: 19px;
-    font-size: 22px;
-    content: "\f178";
+.moved::before {
+  top: 10px;
+  left: 11px;
+  font-size: 22px;
+  content: "\f178";
 }
-.cancel::before{ 
-    top: 6px;
-    left: 20px;
-    font-size: 27px;
-    content: "\f00d";
+.cancel::before {
+  top: 7px;
+  left: 12px;
+  font-size: 24px;
+  content: "\f00d";
 }
-.formInner{
-    display: flex;
-    margin: 10px;
+.formInner {
+  display: flex;
+  margin: 10px;
 }
-.formControl{
-    composes: formControl from "../../common/ItemList/ItemList.module.css";
-    padding: 4px;
-    width: 250px;
+.formControl {
+  composes: formControl from "../../common/ItemList/ItemList.module.css";
+  padding: 4px;
+  width: 250px;
 }
-.addBtn{
-    composes: addBtn from "../../common/ItemList/ItemList.module.css";
-    border: 1px solid var(--dark-border-color);
-    border-radius: 5px;
-    background-color: var(--dark-border-color);
-    color: var(--week-bc-color);
-    font-weight: bold;
+.addBtn {
+  composes: addBtn from "../../common/ItemList/ItemList.module.css";
+  border: 1px solid var(--dark-border-color);
+  border-radius: 5px;
+  background-color: var(--dark-border-color);
+  color: var(--week-bc-color);
+  font-weight: bold;
 }
-.addBtn:hover{
-    border-color: var(--week-bc-color);
-    background-color: var(--week-bc-color);
-    color: var(--dark-border-color);
+.addBtn:hover {
+  border-color: var(--week-bc-color);
+  background-color: var(--week-bc-color);
+  color: var(--dark-border-color);
 }
-.backBlock{
-    composes: backBlock from "../Month/Month.module.css";
+.backBlock {
+  composes: backBlock from "../Month/Month.module.css";
 }
-.back{
-    composes: back from "../Month/Month.module.css";
+.back {
+  composes: back from "../Month/Month.module.css";
 }
-.deleteBtn{
-    composes: delete from "../../common/ItemList/ItemList.module.css";
+.deleteBtn {
+  composes: delete from "../../common/ItemList/ItemList.module.css";
 }
-.deleteBtn::before{
-    top: 0;
-    left: -25px;
-    cursor: pointer;
+.deleteBtn::before {
+  top: 0;
+  left: 25px;
+  cursor: pointer;
+  font-size: 19px;
 }
-.colorInput{
-    width: 25px;
-    margin: -3px;
-    cursor: pointer;
+.colorInput {
+  width: 25px;
+  margin: -3px;
+  cursor: pointer;
 }
-.extend{
-    composes: extend from "../Tracker/Tracker.module.css";
+.extend {
+  composes: extend from "../Tracker/Tracker.module.css";
 }
 .extend::before {
-    top: 0px;
-    left: -60px;
+  top: 0px;
+  left: 1px;
+  font-size: 19px;
+}
+
+@media (max-width: 1270px) {
+  .add::before,
+  .have::before{
+    left: 12px;
+  }
+  .done::before {
+    left: 3px;
+  }
+  .moved::before {
+    left: 7px;
+  }
+  .cancel::before {
+    left: 8px;
+  }
+}
+
+@media (max-width: 900px) {
+  .weekBlock {
+    width: 95%;
+  }
+  .add::before,
+  .have::before{
+    left: 12px;
+  }
+  .done::before {
+    left: 3px;
+  }
+  .moved::before {
+    left: 7px;
+  }
+  .cancel::before {
+    left: 8px;
+  }
+}
+
+@media (max-width: 830px) {
+  .add::before,
+  .have::before{
+    left: 8px;
+  }
+  .done::before {
+    left: 1px;
+    font-size: 19px;
+  }
+  .moved::before {
+    left: 3px;
+  }
+  .cancel::before {
+    left: 4px;
+  }
+}
+@media (max-width: 780px) {
+  .formInner {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 600px) {
+  .formControl {
+    width: auto;
+  }
+}
+@media (max-width: 515px) {
+  .formInner {
+    margin: 10px 0px;
+  }
+  .formControl {
+    font-size: 12px;
+    margin-left: 10px;
+  }
+  .addBtn {
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .day {
+    padding: 7px;
+  }
+  .todo {
+    padding-right: 45px;
+  }
+  .add::before,
+  .have::before{
+    left: 5px;
+    top: 10px;
+  }
+  .done::before {
+    left: -1px;
+    top: 5px;
+    font-size: 15px;
+  }
+  .moved::before {
+    left: 3px;
+    font-size: 17px;
+  }
+  .cancel::before {
+    left: 4px;
+    top: 8px;
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 420px) {
+  .day {
+    padding: 5px;
+  }
+  .todo {
+    padding-right: 45px;
+  }
+  .add::before,
+  .have::before{
+    left: 3px;
+    top: 5px;
+  }
+  .done{
+    border: 3px outset var(--border-color);
+  }
+  .done::before {
+    left: -1px;
+    top: 5px;
+    font-size: 15px;
+  }
+  .moved::before {
+    left: 1px;
+    top: 7px;
+    font-size: 15px;
+  }
+  .cancel::before {
+    left: 2px;
+    top: 6px;
+  }
+}
+@media (max-width: 400px) {
+  .formControl {
+    width: 130px;
+  }
+  .todo {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 380px) {
+  .formControl {
+    width: 100px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 340px) {
+  .formControl {
+    width: 85px;
+    font-size: 8px;
+  }
 }

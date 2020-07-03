@@ -14,13 +14,17 @@ import Week from "./components/MonthList/Week/WeekContainer";
 import StartPage from "./components/StartPage/StartPage";
 import "./fonts/fonts.css";
 import styles from "./App.module.css";
+import NavState from "./components/Navbar/NavState";
 
 const App = (props) => {
   return (
     <Provider store={store}>
       <HashRouter>
         <div className={styles.appWrapper}>
-          <Navbar />
+          <NavState>
+            <Navbar /> 
+          </NavState>
+          
           <div className={styles.appWrapperContent}>
             <Switch>
               <Route exact path="/" render={() => <StartPage />} />

@@ -5,18 +5,7 @@ const CHANGE_PLAN = "CHANGE_PLAN";
 const DELETE_MOVIE = " DELETE_MOVIE";
 
 let initialState = {
-  moviesData: [
-    {
-      id: "1qw",
-      name: "Брат",
-      checked: false,
-    },
-    {
-      id: "2qwe",
-      name: "Бойцовский клуб",
-      checked: true,
-    },
-  ],
+  moviesData: [],
 };
 
 const moviesReducer = (state = initialState, action) => {

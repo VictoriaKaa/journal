@@ -19,33 +19,7 @@ const ADD_MONTH_DOING = "ADD_MONTH_DOING";
 
 // инициализация стейта
 export let initialState = {
-  monthData: [
-    {
-      id: "dkjghskdfjg",
-      month: 3,
-      year: 2020,
-      doings: [
-        {
-          doingId: "qweqwe",
-          doing: "сходить в магазин",
-          color: "none",
-          week: [0],
-          days: [
-            { day: 1, state: done },
-            { day: 2, state: moved },
-          ],
-        },
-      ],
-      habits: [
-        {
-          habitId: "dkjghskdfjg",
-          habit: "Привычка чистить зубы",
-          days: [false, false, false, true],
-          start: 2,
-        },
-      ],
-    },
-  ],
+  monthData: [],
 };
 
 const monthReducer = (state = initialState, action) => {

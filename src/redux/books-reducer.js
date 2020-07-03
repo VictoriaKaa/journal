@@ -6,20 +6,7 @@ const DELETE_BOOK = "DELETE_BOOK";
 
 // инициализация стейта
 let initialState = {
-  booksData: [
-    {
-      id: "1",
-      name: "Название книжечки",
-      author: "Автор Автор",
-      checked: false,
-    },
-    {
-      id: "2",
-      name: "Крутые дела крутых пацанов",
-      author: "Крутой автор",
-      checked: false,
-    },
-  ],
+  booksData: [],
 };
 
 // reducer - применяет action к state

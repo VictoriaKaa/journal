@@ -1,10 +1,25 @@
 nav{
-    background-color: rgb(var(--navbar-block-color), 0.7);
+    background-color: rgb(var(--navbar-block-color), 0.8);
+    min-width: 20px;
     width: 250px;
     min-height: 100%;
 }
 .item{
     margin: 10px;
+}
+.menuBtn{
+    display: none;
+    position: absolute;
+    top: 8px;
+    left: 90vw;
+    z-index: 100;
+}
+.line{
+    width: 30px;
+    height: 2px;
+    margin-bottom: 6px;
+    border-radius: 25%;
+    background-color: var(--navbar-dark-color);
 }
 .item a{
     display: block;
@@ -22,8 +37,30 @@ nav{
     background-color: var(--light-pink-color);
 }
 
+@media(max-width: 1300px){
+    nav{
+        width: auto;
+        min-height: 35px;
+        display: flex;
+        justify-content: flex-end;
+    }  
+    nav .menuBtn{
+        display: block;
+    } 
+    .navMenu{
+        position: absolute;
+        padding-top: 40px;
+        background-color: rgb(var(--navbar-block-color), 0.9);
+        z-index: 10;
+    }
+    .noMenu{
+        display: none;
+    }
+}
+
+
 @media(max-width: 600px){
-    .item{
-        padding: 20px;
+    .item a{
+        font-size: 16px;
     }
 }

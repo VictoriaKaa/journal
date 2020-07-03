@@ -5,18 +5,7 @@ const CHANGE_STATUS = "CHANGE_STATUS";
 const DELETE_PLAN = "DELETE_PLAN";
 
 let initialState = {
-  plansData: [
-    {
-      id: "12312",
-      name: "Сходить к врачу",
-      checked: false,
-    },
-    {
-      id: "adsada13",
-      name: "Сходить в магазин",
-      checked: true,
-    },
-  ],
+  plansData: [],
 };
 
 const plansReducer = (state = initialState, action) => {

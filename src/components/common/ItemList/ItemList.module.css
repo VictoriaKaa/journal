@@ -9,11 +9,12 @@
 }
 .booksList{
     position: relative;
-    min-height: 95vh;
+    min-height: 85vh;
+    padding-bottom: 60px;
     background-color: rgb(var(--main-block-color), 0.9);
     box-shadow: 0px 5px 20px 3px rgba(84,70,8,1);
     width: 50%;
-    min-height: 700px;
+    /* min-height: 700px; */
     margin: 20px auto;
     font-family: 'Neucha', cursive;
 }
@@ -41,21 +42,25 @@
     display: flex;
 }
 .formControl{
-    margin-left: 20px;
-    padding: 5px;
     width: 190px;
     height: 20px;
+    margin-top: 5px;
+    margin-left: 20px;
+    padding: 5px;
     border: 1px solid var(--tracker-color);
     border-radius: 5px;
     background-color: var(--light-text-color);
-    color: #555555;
+    color: var(--btn-color);
     font-family: 'Pangolin', cursive;
     font-size: 14px;
+}
+.formControl::placeholder{
+    color: var(--btn-color);
 }
 .addBtn{
     width: 150px;
     height: 30px;
-    margin-left: 10px;
+    margin: 5px 20px 0px 10px;
     border: 1px solid var(--navbar-color);
     border-radius: 5px;
     background-color: var(--light-text-color);
@@ -178,4 +183,49 @@ input[type="radio"]:checked + label:after {
 }
 
 
+@media(max-width: 1000px){
+    .booksList{
+        width: 80%;
+    }
+}
+@media(max-width: 700px){
+    .bookFormInner{
+        flex-wrap: wrap;
+    }
+    .addBtn {
+        margin-left: 20px;
+    }
     
+    .booksList{
+        min-height: 65vh;
+    }
+}
+
+@media (max-width: 470px) {
+    .booksTitle{
+        font-size: 40px;
+    }
+    .title, .id, .read{
+        font-size: 16px;
+    }
+}
+@media (max-width: 425px) {
+    .formControl{
+        width: 160px;
+        font-size: 12px;
+    }
+    .addBtn{
+        width: 70px;
+        font-size: 12px;
+    }
+    .checkBtn{
+        width: 150px;
+    }
+}
+
+@media (max-width: 360px) {
+    .formControl{
+        width: 130px;
+        font-size: 12px;
+    }
+}
